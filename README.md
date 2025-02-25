@@ -77,3 +77,55 @@ Finally, we will compare our fund’s performance with the self-constructed grow
 Regarding data selection, we have chosen Nifty 200 as a reference because all stocks in our fund are constituents of this index. This allows us to minimize the short-term impact of the size factor.
 
 For the investment approach, we adopt an equal-weighted strategy to align as closely as possible with our fund’s investment method while eliminating the influence of weighting techniques on portfolio returns. The impact of different weighting methods will be further explored in the next section.
+
+## Literature review
+
+To identify whether factors beyond market risk premium can explain stock return generation in India over the long term, we reviewed the empirical results of the five-factor model proposed by Fama and French (2015) in the Indian market.
+
+Harshita et al. (2015) analyzed data from 1999 to 2014, using CNX 500 companies to construct the value, size, investment, and profitability factors and formed four investment portfolios incorporating these factor premiums for testing. Their findings indicate a positive relationship between return rates and book-to-market ratio, suggesting the presence of a value premium in the Indian market.
+
+Agarwalla et al. (2017) conducted a systematic review of value, size, and momentum factors. Regarding the value factor, their study reported a 9.08% stable annualized return with a 16.33% volatility, outperforming the global average value premium reported by Fama and French (2012) and aligning closely with the value premium observed in emerging markets.
+
+Based on these studies, it is evident that the value factor exists in both India and other emerging markets over the long term. Therefore, a high-growth strategy may not be suitable for long-term investors with an investment horizon of over 10 years as a long-term asset management target. However, given that this fund has only been in existence for two months, it remains uncertain how the value premium fluctuates in the short term, which will be further discussed in the next section.
+
+## Short term value premium
+
+To identify the value premium during the existence of this fund, we ranked all Nifty 200 constituent stocks by their price-to-earnings (PE) ratio from highest to lowest. We excluded companies with missing data and selected the top 30 stocks as the Growth Portfolio (GP) and the bottom 30 stocks as the Value Portfolio (VP). Both portfolios were equally weighted.
+
+![image](https://github.com/user-attachments/assets/a368546c-485f-474f-913c-d0f89dce00e5)
+
+
+
+Where:
+-  R_t  represents the **risk premium**.
+-  GR_t  is the **daily risk premium** of the top 30 **growth stocks** (high PE ratio) in Nifty 200, measuring the return of growth stocks.
+-  VR_t  is the **daily risk premium** of the bottom 30 **value stocks** (low PE ratio) in Nifty 200, measuring the return of value stocks.
+-  t  represents the **investment period**.
+- **Data sources**: **Yahoo Finance** and **TradingView**.
+
+Ignoring transaction costs, we solely compare the performance of the growth and value portfolios during the investment period using the following regressions:
+
+![image](https://github.com/user-attachments/assets/e6eacdc6-3d27-4eb2-b830-43d210f7fc58)
+
+
+The following table presents the performance metrics of both portfolios. The results indicate that regardless of the performance metric used, the growth portfolio consistently outperformed the value portfolio over the two-month period. Therefore, in the short term, the fund’s strategy of primarily investing in growth stocks appears to be the correct direction.
+
+| Model/Portfolio | alpha  | beta | Average Return | Sharpe Ratio | Treynor Ratio | Information Ratio |
+|----------------|------------|------------|----------------|--------------|--------------|------------------|
+|  GR_t / GP  | 0.0021 | 0.8590 | 0.0029 | 0.3199 | 0.0033 | 0.3072 |
+| *Std. Error* | (0.001) | (0.160) |  |  |  |  |
+|  VR_t / VP  | 0.0019 | 0.9227 | 0.0027 | 0.2264 | 0.0029 | 0.1860 |
+| *Std. Error* | (0.002) | (0.238) |  |  |  |  |
+
+We attempted to use the Growth Portfolio (GP) as a benchmark portfolio and compared the regression results with the original benchmark portfolio, SENSEX 30. The following table presents the coefficient returns of both models.
+
+From the results, we observe that while GP does not explain the fund's performance as effectively as SENSEX 30, this may be due to the fund incorporating multiple growth indicators, such as price-to-earnings (PE) ratio and annual revenue growth rate, and diversifying investments across high-growth companies in various industries.
+
+Moreover, when using GP as the benchmark portfolio, the fund's ability to generate excess returns appears to be relatively lower. This suggests that the fund does not demonstrate a strong ability to select superior growth stocks, nor does it exhibit relative superiority in returns compared to GP.
+
+| Portfolio Benchmark | alpha | beta  |  R^2  |
+|---------------------|------------|------------|---------|
+| **Portfolio / GP** | 0.0002 | 0.6473 | 0.453 |
+| *Std. Error* | (0.001) | (0.110) |  |
+| **Portfolio / SENSEX** | 0.0015 | 0.9406 | 0.634 |
+| *Std. Error* | (0.001) | (0.109) |  |
