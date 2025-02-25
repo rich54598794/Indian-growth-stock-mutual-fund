@@ -1,4 +1,17 @@
 # Indian gorwth stock mutual fund construction (2024/03/18-2024/05/24)
+
+## Abstract
+
+This study aims to explore the performance of growth-oriented funds in India by analyzing different stock selection strategies, portfolio returns, and risk characteristics to evaluate the fund’s investment effectiveness in the current market environment.
+
+We selected 10 company stocks as the fund’s components and adjusted the stock holdings based on market performance during the investment period.
+
+The study shows that over two months, the fund achieved a positive alpha, a beta value less than 1, and Sharpe and Treynor ratios higher than the benchmark index, indicating that the fund outperformed the market benchmark.
+
+The growth portfolio significantly outperformed the value portfolio in the short term, validating the effectiveness of the stock selection strategy in the short run.
+
+However, the main limitation of this study is the short research period (only two months), which does not fully reflect the long-term investment performance.
+
 ## Introduction
 This fund is a growth-oriented fund that selects companies with higher price-to-earnings (P/E) ratios. Referring to the three-year average P/E ratio of the Indian market at 22.2, we choose companies with a P/E ratio greater than 24. Additionally, we consider the revenue growth rate as an indicator, selecting companies with a growth rate exceeding 15%. A company qualifies if it meets either of these criteria.
 
